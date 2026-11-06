@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f3fc">
+  <meta name="description" content="Build a little theme park. Keep the good times running. A playful, five-minute introduction to Aikido's security portfolio.">
+  <title>Aikido World — Big thrills. Little worries.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23745be8'/%3E%3Cpath d='M14 46 32 14l18 32H39l-7-13-7 13Z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#mission">Skip to your mission</a>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Aikido World home" id="home-link"><span class="brand-symbol" aria-hidden="true">a</span><span>aikido<span class="brand-world">WORLD</span></span></a>
+    <div class="top-tag">A LITTLE PARK. A BIG ADVENTURE.</div>
+    <nav class="top-actions" aria-label="Game controls">
+      <button class="text-button" id="guide-button"><span aria-hidden="true">▤</span> Field guide</button>
+      <button class="icon-button" id="sound-button" aria-label="Turn sound on" aria-pressed="false" title="Sound off">♪<span class="sound-slash">╱</span></button>
+      <button class="icon-button" id="settings-button" aria-label="Game settings" title="Settings">⚙</button>
+    </nav>
+  </header>
+  <main>
+    <section class="page-heading" aria-label="Park overview">
+      <div><div class="eyebrow">WELCOME TO YOUR HAPPY PLACE</div><h1>Big thrills. <span>Little worries.</span></h1></div>
+      <div class="stats" aria-label="Park progress"><div><span class="stat-icon purple">⚑</span><span><b id="rides-stat">0 / 3</b><small>rides open</small></span></div><div><span class="stat-icon peach">☺</span><span><b id="guests-stat">0</b><small>happy guests</small></span></div><div class="status-stat"><span class="live-dot"></span><span id="park-status">Dreaming big</span></div></div>
+    </section>
+    <div class="game-layout">
+      <section class="park-frame" aria-label="Interactive theme park">
+        <div class="map-top"><span class="map-label"><span class="live-dot"></span> YOUR LITTLE WORLD</span><span id="map-phase">Let’s build something good</span></div>
+        <div id="park" class="park" aria-label="Park map"></div>
+        <div class="park-bottom"><span id="map-hint">Every great park starts with a little imagination.</span><button id="motion-button" class="tiny-button" aria-pressed="false">Pause motion</button></div>
+        <div id="toast" class="toast" role="status"></div>
+      </section>
+      <aside class="mission-card" id="mission" tabindex="-1" aria-labelledby="mission-title"></aside>
+    </div>
+    <nav class="journey" aria-label="Adventure chapters" id="journey"></nav>
+    <section class="bottom-note"><span><span class="sparkle">✦</span> Build the fun. We’ll help with the what-ifs.</span><span id="save-status">About 5 minutes · No experience needed</span></section>
+  </main>
+  <footer><span>Aikido World <span class="footer-dot">·</span> An independent learning prototype</span><button class="footer-link" id="about-button">About this experience</button></footer>
+  <dialog id="guide-dialog" class="guide-dialog" aria-labelledby="guide-heading"><div class="dialog-heading"><div><div class="eyebrow">FROM THE PARK TO THE PRODUCT</div><h2 id="guide-heading">Your field guide</h2></div><button class="close-button" data-close aria-label="Close field guide">×</button></div><div id="guide-tabs" class="guide-tabs" role="tablist" aria-label="Product families"></div><div id="guide-content"></div></dialog>
+  <dialog id="settings-dialog" class="small-dialog" aria-labelledby="settings-heading"><div class="dialog-heading"><h2 id="settings-heading">Make yourself at home</h2><button class="close-button" data-close aria-label="Close settings">×</button></div><p>Your adventure saves automatically in this browser.</p><button id="settings-motion" class="setting-row">Pause animations <span>→</span></button><button id="restart-button" class="setting-row">Start a fresh park <span>↻</span></button><div id="restart-confirm" hidden><p>This resets your park and chapter progress.</p><button id="confirm-restart" class="primary">Yes, start fresh</button><button id="cancel-restart" class="text-button">Keep my park</button></div></dialog>
+  <dialog id="about-dialog" class="small-dialog" aria-labelledby="about-heading"><div class="dialog-heading"><h2 id="about-heading">A little world of security</h2><button class="close-button" data-close aria-label="Close about">×</button></div><p>This independent educational prototype uses a theme park to explain Aikido’s software security portfolio. It is not an official Aikido product or a simulation of real security coverage.</p><p>The park’s guests, alerts, and outcomes are fictional game mechanics. Product explanations link to Aikido’s public pages. Coverage and automation depend on supported technologies and configuration.</p><p>No accounts, forms, or analytics are built into the game. Progress stays in this browser.</p></dialog>
+  <noscript><p class="noscript">This little park needs JavaScript to open. Please enable it and reload.</p></noscript>
+</body>
+</html>
